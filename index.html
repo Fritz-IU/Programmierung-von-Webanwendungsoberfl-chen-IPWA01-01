@@ -14,21 +14,11 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-white">
-      <div class="container">
+      <div class="container-fluid d-flex align-items-center">
         <a class="navbar-brand" href="index.html">
           <img src="images/UnCo.webp" alt="KleiSper" width="35px" />
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarToggle"
-          aria-controls="navbarToggle"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+
         <div class="collapse navbar-collapse" id="navbarToggle">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -58,22 +48,34 @@
               <a class="nav-link active" href="#">Alle Spenden</a>
             </li>
           </ul>
-          
         </div>
+        <div class="d-flex  ms-auto">
         <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Suche"
-              aria-label="Search"
-            />
-            <button class="btn btn-link btn-outline-secondary" type="submit">
-              <img src="images/search.svg" alt="Suchen" width="20px" />
-            </button>
-          </form>
-          <button class="btn btn-link btn-outline-light">
-            <img src="images/person-fill.svg" alt="Suchen" width="20px" />
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Suche"
+            aria-label="Search"
+          />
+          <button class="btn btn-link btn-outline-secondary" type="submit">
+            <img src="images/search.svg" alt="Suchen" width="20px" />
           </button>
+        </form>
+        <button class="btn btn-link btn-outline-light">
+          <img src="images/person-fill.svg" alt="Profil" width="20px" />
+        </button>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarToggle"
+          aria-controls="navbarToggle"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
     </nav>
 
