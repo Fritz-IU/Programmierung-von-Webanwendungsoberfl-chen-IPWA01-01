@@ -97,20 +97,49 @@
           </button>
         </div>
       </nav>
-      <div class="container-fluid img-fluid py-5" style="background-image: url('images/Header_background.png'); background-size: cover; background-position: center;">
+      <div
+        class="container-fluid img-fluid py-5"
+        style="
+          background-image: url(&quot;images/Header_background.png&quot;);
+          background-size: cover;
+          background-position: center;
+        "
+      >
         <div class="container-md">
           <h1 class="display-3"><strong>Wilkommen bei KleiSper.</strong></h1>
-      <h1 class="display-4"><strong><small>Anlaufstelle für deine Altkleider.</small></strong></h1>
+          <h1 class="display-4">
+            <strong><small>Anlaufstelle für deine Altkleider.</small></strong>
+          </h1>
         </div>
-      
       </div>
     </header>
     <main>
-      <formular> </formular>
+      <div class="container-md">
+        <form>
+          <div class="row">
+            <div class="col-6">
+            <label for="vorN" class="form-label">Vorname:</label>
+            <input type="text" id="vorN" name="vorN" class="form-control" />
+          </div>
+          <div class="col-6">
+            <label for="nachN" class="form-label">Nachname:</label>
+            <input type="text" id="nachN" name="nachN" class="form-control" />
+          </div>
+          </div>
+          <div class="col-8">
+            <label for="email" class="form-label">E-Mailadresse:</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="name@beispiel.de">
+          </div>
+          <div class="form-check col-6">
+            <p>Sollen die Kleider abgeholt  oder vor Ort abgegeben werden?</p>
+            <input class="form-check-input" type="radio" name="ort" id="ort">
+            <label class="form-check-label" for="ort">Abgabe vor Ort</label>
+          </div>
+          
+        </form>
+      </div>
     </main>
-    <footer>
-      Rechtliches
-    </footer>
+    <footer>Rechtliches</footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
