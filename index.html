@@ -117,57 +117,64 @@
       <div class="container-md">
         <h3 class="display-5">Kleiderspende registrieren:</h3>
         <div style="background-color: beige; border-radius: 5px; padding: 10px">
-          <form class="">
-            <p>Sollen die Kleider abgeholt oder vor Ort abgegeben werden?</p>
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="ort"
-                id="ort1"
-              />
-              <label class="form-check-label" for="ort1"
-                >Persönliche Abgabe</label
-              >
-            </div>
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="ort"
-                id="ort2"
-              />
-              <label class="form-check-label" for="ort2">Abholung</label>
-            </div>
-            <div class="row">
-              <div class="col-4">
-                <label for="vorN" class="form-label">Vorname:</label>
-                <input type="text" id="vorN" name="vorN" class="form-control" />
-              </div>
-              <div class="col-4">
-                <label for="nachN" class="form-label">Nachname:</label>
+          <div class="row">
+            <div class="col-2"></div>
+            <form class="col-8">
+              <p>Sollen die Kleider abgeholt oder vor Ort abgegeben werden?</p>
+              <div class="form-check">
                 <input
-                  type="text"
-                  id="nachN"
-                  name="nachN"
+                  class="form-check-input"
+                  type="radio"
+                  name="ort"
+                  id="ort1"
+                />
+                <label class="form-check-label" for="ort1"
+                  >Persönliche Abgabe</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="ort"
+                  id="ort2"
+                />
+                <label class="form-check-label" for="ort2">Abholung</label>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <label for="vorN" class="form-label">Vorname:</label>
+                  <input
+                    type="text"
+                    id="vorN"
+                    name="vorN"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-6">
+                  <label for="nachN" class="form-label">Nachname:</label>
+                  <input
+                    type="text"
+                    id="nachN"
+                    name="nachN"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="email" class="form-label">E-Mailadresse:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
                   class="form-control"
+                  placeholder="name@beispiel.de"
                 />
               </div>
-            </div>
-            <div class="col-8">
-              <label for="email" class="form-label">E-Mailadresse:</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="form-control"
-                placeholder="name@beispiel.de"
-              />
-            </div>
-            <div>
-              <div class="row">
-                <p>Adresse</p>
-                <div class="col-7">
+
+              <div class="row" id="Abholung">
+                <p><strong>Adresse:</strong></p>
+                <div class="col-10">
                   <label for="straße" class="form-label">Straße:</label>
                   <input
                     type="text"
@@ -176,7 +183,7 @@
                     class="form-control"
                   />
                 </div>
-                <div class="col-1">
+                <div class="col-2">
                   <label for="hausNr" class="form-label">Hausnummer:</label>
                   <input
                     type="text"
@@ -185,12 +192,12 @@
                     class="form-control"
                   />
                 </div>
-                <div class="col-4"></div>
-                <div class="col-2">
+
+                <div class="col-3">
                   <label for="plz" class="form-label">Postleitzahl:</label>
                   <input type="text" id="plz" name="plz" class="form-control" />
                 </div>
-                <div class="col-6">
+                <div class="col-9">
                   <label for="stadt" class="form-label">Stadt:</label>
                   <input
                     type="text"
@@ -199,9 +206,37 @@
                     class="form-control"
                   />
                 </div>
+                
+                <div class="row">
+                  <div class="col-4">
+                    <p><strong>Wunschtermin für die Abholung:</strong></p>
+                  </div>
+                  <div class="col-4">
+                    <label for="datum" class="form-label">Datum:</label>
+                  <input
+                    type="date"
+                    id="datum"
+                    name="datum"
+                    class="form-label"
+                  />
+                  </div>
+                  <div class="col-4">
+                    <label for="zeit" class="form-label">Zeitslot:</label>
+                    <div class="col-6">
+                      <select id="zeit" name="zeit" class="form-select">
+                    <option value="1">8-10 Uhr</option>
+                    <option value="2">10-12 Uhr</option>
+                    <option value="3">14-16 Uhr</option>
+                    <option value="4">16-18 Uhr</option>
+                  </select>
+                    </div>
+                  
+                  </div>
+                  
+                </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </main>
