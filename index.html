@@ -254,6 +254,7 @@
               <div class="row align-items-center">
                 <div class="col-auto">
                   <select id="kleiderArt" name="kleiderArt" class="form-select">
+                    <option selected>Art der Kleidung</option>
                     <option value="1">Hose</option>
                     <option value="2">T-Shirt</option>
                     <option value="3">Pullover</option>
@@ -263,6 +264,7 @@
                 </div>
                 <div id="größen1" class="col-auto">
                   <select id="größe" name="größe" class="form-select">
+                    <option selected>Größe Hose/T-Shirt/Pullover</option>
                     <option value="1">XXS</option>
                     <option value="2">XS</option>
                     <option value="3">S</option>
@@ -274,6 +276,7 @@
                 </div>
                 <div id="größen2" class="col-auto">
                   <select id="schuhgröße" name="schuhgröße" class="form-select">
+                    <option selected>Schuhgröße</option>
                     <option value="1">35</option>
                     <option value="2">36</option>
                     <option value="3">37</option>
@@ -292,6 +295,7 @@
                 </div>
                 <div id="größen3" class="col-auto">
                   <select id="handschuhgröße" name="handschuhgröße" class="form-select">
+                    <option selected>Handschuhgröße</option>
                     <option value="1">4,5</option>
                     <option value="2">5</option>
                     <option value="3">5,5</option>
@@ -307,8 +311,50 @@
                     <option value="13">11</option>
                   </select>
                 </div>
+                <div class="col-auto">
+                  <label for="anzahl" class="form-label">Anzahl der Kleidungsstücke</label>
+                </div>
+                <div class="col-auto">
+                  <input type="number" id="anazhl" name="anzahl" class="form-control">
+                </div>
+                <div class="col-auto">
+                  <button class="btn btn-primary" type="submit">Kleidung hinzufügen</button>
+                </div>
+                
               </div>
-              
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Art der Kleidung</th>
+                    <th scope="col">Größe</th>
+                    <th scope="col">Menge</th>
+                    <th scope="col">Entfernen</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>T-Shirt</td>
+                    <td>M</td>
+                    <td>2</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Hose</td>
+                    <td>L</td>
+                    <td>1</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Schuhe</td>
+                    <td>43</td>
+                    <td>3</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="col-auto">
+                  <button class="btn btn-primary" type="submit">Spende registrieren!</button>
+                </div>
             </form>
 
           </div>
