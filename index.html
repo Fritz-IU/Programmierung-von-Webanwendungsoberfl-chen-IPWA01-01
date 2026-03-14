@@ -14,7 +14,7 @@
   </head>
   <body class="d-flex flex-column min-vh-100">
     <header>
-      <nav class="navbar navbar-expand-md bg-white fixed-top">
+      <nav class="navbar navbar-expand-md bg-dark-subtle shadow fixed-top">
         <div class="container-md d-flex align-items-center">
           <a class="navbar-brand" href="index.html">
             <img src="images/favicon.ico" alt="KleiSper" width="35px" />
@@ -119,8 +119,21 @@
     </header>
     <main class="flex-grow-1">
       <div class="container-md">
-        <h2>Kleiderspende registrieren:</h2>
+        <h2 class="mt-2">Unsere Mission:</h2>
+        <p>
+          Wir sammeln Kleiderspenden und bringen diese in verschiedene
+          Krisengebiete. Dabei kann das Krisengebiet, in das die gespendeten
+          Kleider gebracht werden sollen, bei der Spende angegeben werden. Es
+          gibt eine von uns evaluierte Auswahl an aktuellen Krisengebieten, in
+          denen Kleiderspenden benötigt werden.<br />Die Kleiderspenden können
+          entweder an der Sammelstelle direkt abgegeben oder von einem unserer
+          Sammelfahrzeuge eingesammelt werden. Eine Abholung ist nur im
+          Postleitzahlbereich 38 möglich. In beiden Fällen muss das
+          untenstehende Formular ausgefüllt werden.
+        </p>
+        
         <div style="background-color: beige; border-radius: 5px; padding: 10px">
+          <h3>Kleiderspende registrieren:</h3>
           <div class="row">
             <div class="col-md-2"></div>
             <form class="col-md-8">
@@ -254,134 +267,143 @@
                     <option value="1">Endor</option>
                   </select>
                 </div>
-                <div id="kleiderArten" class="form-floating">
-                  <select
-                    id="kleiderArt"
-                    name="kleiderArt"
-                    class="form-select w-auto"
-                    style="min-width: 150px"
+                <div class="row g-3">
+                  <div
+                    id="kleiderArten"
+                    class="form-floating col-xl-3 col-lg-4 col-md-6"
                   >
-                    <option value="1">Hose</option>
-                    <option value="2">T-Shirt</option>
-                    <option value="3">Pullover</option>
-                    <option value="4">Schuhe</option>
-                    <option value="5">Handschuhe</option>
-                  </select>
-                  <label for="kleiderArt" class="ps-4">Art der Kleidung</label>
-                </div>
+                    <select
+                      id="kleiderArt"
+                      name="kleiderArt"
+                      class="form-select"
+                    >
+                      <option value="1">Hose</option>
+                      <option value="2">T-Shirt</option>
+                      <option value="3">Pullover</option>
+                      <option value="4">Schuhe</option>
+                      <option value="5">Handschuhe</option>
+                    </select>
+                    <label for="kleiderArt" class="ps-4"
+                      >Art der Kleidung</label
+                    >
+                  </div>
 
-                <div id="größen1" class="form-floating">
-                  <select
-                    id="größe"
-                    name="größe"
-                    class="form-select w-auto"
-                    style="min-width: 150px"
+                  <div
+                    id="größen1"
+                    class="form-floating col-xl-3 col-lg-4 col-md-6"
                   >
-                    <option value="1">XXS</option>
-                    <option value="2">XS</option>
-                    <option value="3">S</option>
-                    <option value="4">M</option>
-                    <option value="5">L</option>
-                    <option value="6">XL</option>
-                    <option value="7">XXL</option>
-                  </select>
-                  <label for="größen1" class="ps-4"> Größe XXS - XXL</label>
-                </div>
-                <div id="größen2" class="form-floating">
-                  <select
-                    id="schuhgröße"
-                    name="schuhgröße"
-                    class="form-select w-auto"
-                    style="min-width: 150px"
+                    <select id="größe" name="größe" class="form-select">
+                      <option value="1">XXS</option>
+                      <option value="2">XS</option>
+                      <option value="3">S</option>
+                      <option value="4">M</option>
+                      <option value="5">L</option>
+                      <option value="6">XL</option>
+                      <option value="7">XXL</option>
+                    </select>
+                    <label for="größen1" class="ps-4"> Größe XXS - XXL</label>
+                  </div>
+                  <div
+                    id="größen2"
+                    class="form-floating col-xl-3 col-lg-4 col-md-6"
                   >
-                    <option value="1">35</option>
-                    <option value="2">36</option>
-                    <option value="3">37</option>
-                    <option value="4">38</option>
-                    <option value="5">39</option>
-                    <option value="6">40</option>
-                    <option value="7">41</option>
-                    <option value="8">42</option>
-                    <option value="9">43</option>
-                    <option value="10">44</option>
-                    <option value="11">45</option>
-                    <option value="12">46</option>
-                    <option value="13">47</option>
-                    <option value="14">48</option>
-                  </select>
-                  <label for="größen2" class="ps-4">Schuhgröße</label>
-                </div>
-                <div id="größen3" class="form-floating">
-                  <select
-                    id="handschuhgröße"
-                    name="handschuhgröße"
-                    class="form-select w-auto"
-                    style="min-width: 150px"
+                    <select
+                      id="schuhgröße"
+                      name="schuhgröße"
+                      class="form-select"
+                    >
+                      <option value="1">35</option>
+                      <option value="2">36</option>
+                      <option value="3">37</option>
+                      <option value="4">38</option>
+                      <option value="5">39</option>
+                      <option value="6">40</option>
+                      <option value="7">41</option>
+                      <option value="8">42</option>
+                      <option value="9">43</option>
+                      <option value="10">44</option>
+                      <option value="11">45</option>
+                      <option value="12">46</option>
+                      <option value="13">47</option>
+                      <option value="14">48</option>
+                    </select>
+                    <label for="größen2" class="ps-4">Schuhgröße</label>
+                  </div>
+                  <div
+                    id="größen3"
+                    class="form-floating col-xl-3 col-lg-4 col-md-6"
                   >
-                    <option value="1">4,5</option>
-                    <option value="2">5</option>
-                    <option value="3">5,5</option>
-                    <option value="4">6</option>
-                    <option value="5">6,5</option>
-                    <option value="6">7</option>
-                    <option value="7">7,5</option>
-                    <option value="8">8</option>
-                    <option value="9">8,5</option>
-                    <option value="10">9</option>
-                    <option value="11">9,5</option>
-                    <option value="12">10</option>
-                    <option value="13">11</option>
-                  </select>
-                  <label for="größen3" class="ps-4">Handschuhgröße</label>
-                </div>
-                <div class="form-floating">
-                  <input
-                    type="number"
-                    id="anazhl"
-                    name="anzahl"
-                    class="form-control w-auto"
-                    style="max-width: 150px"
-                    min="0"
-                    oninput="if (this.value < 0) this.value = 0;"
-                  />
-                  <label for="anzahl">Anzahl</label>
-                </div>
-                <div class="col-auto">
-                  <button class="btn btn-primary" type="submit">
-                    Kleidung hinzufügen
-                  </button>
+                    <select
+                      id="handschuhgröße"
+                      name="handschuhgröße"
+                      class="form-select"
+                    >
+                      <option value="1">4,5</option>
+                      <option value="2">5</option>
+                      <option value="3">5,5</option>
+                      <option value="4">6</option>
+                      <option value="5">6,5</option>
+                      <option value="6">7</option>
+                      <option value="7">7,5</option>
+                      <option value="8">8</option>
+                      <option value="9">8,5</option>
+                      <option value="10">9</option>
+                      <option value="11">9,5</option>
+                      <option value="12">10</option>
+                      <option value="13">11</option>
+                    </select>
+                    <label for="größen3" class="ps-4">Handschuhgröße</label>
+                  </div>
+                  <div class="form-floating col-xl-3 col-lg-4 col-md-6">
+                    <input
+                      type="number"
+                      id="anazhl"
+                      name="anzahl"
+                      class="form-control"
+                      min="0"
+                      oninput="if (this.value < 0) this.value = 0;"
+                    />
+                    <label for="anzahl">Anzahl</label>
+                  </div>
+                  <div class="col-auto col-xl-3 col-md-4">
+                    <button class="btn btn-primary" type="submit">
+                      Kleidung hinzufügen
+                    </button>
+                  </div>
                 </div>
               </div>
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th scope="col">Art der Kleidung</th>
-                    <th scope="col">Größe</th>
-                    <th scope="col">Menge</th>
-                    <th scope="col">Entfernen</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>T-Shirt</td>
-                    <td>M</td>
-                    <td>2</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Hose</td>
-                    <td>L</td>
-                    <td>1</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Schuhe</td>
-                    <td>43</td>
-                    <td>3</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="col-auto mt-4">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Art der Kleidung</th>
+                      <th scope="col">Größe</th>
+                      <th scope="col">Menge</th>
+                      <th scope="col">Entfernen</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>T-Shirt</td>
+                      <td>M</td>
+                      <td>2</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Hose</td>
+                      <td>L</td>
+                      <td>1</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Schuhe</td>
+                      <td>43</td>
+                      <td>3</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <div class="col-auto">
                 <button class="btn btn-primary" type="submit">
                   Spende registrieren!
