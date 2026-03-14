@@ -10,6 +10,7 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link href="style.css" rel="stylesheet">
     <title>KleiSper</title>
   </head>
   <body class="d-flex flex-column min-vh-100">
@@ -240,7 +241,13 @@
                 </div>
                 <div class="col-sm-3 col-12">
                   <label for="plz" class="form-label">Postleitzahl:</label>
-                  <input type="text" id="plz" name="plz" class="form-control" />
+                  <input
+                    type="number"
+                    id="plz"
+                    name="plz"
+                    class="form-control my-no-spin"
+                    
+                  />
                 </div>
                 <div class="col-sm-9 col-12">
                   <label for="stadt" class="form-label">Stadt:</label>

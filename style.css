@@ -1,0 +1,12 @@
+/* https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+/* Chrome, Safari, Edge, Opera */
+.my-no-spin::-webkit-outer-spin-button,
+.my-no-spin::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.my-no-spin[type="number"] {
+  -moz-appearance: textfield;
+}
