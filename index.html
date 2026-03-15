@@ -261,6 +261,9 @@
                     type="number"
                     id="plz"
                     name="plz"
+                    min="38000"
+                    max="38999"
+                    required
                     class="form-control my-no-spin"
                     
                   />
@@ -291,10 +294,10 @@
                   <div class="col-auto">
                     <label for="zeit" class="col-form-label">Zeit:</label>
                     <select id="zeit" name="zeit" class="form-select">
-                      <option value="1">8-10 Uhr</option>
-                      <option value="2">10-12 Uhr</option>
-                      <option value="3">14-16 Uhr</option>
-                      <option value="4">16-18 Uhr</option>
+                      <option value="8-10">8-10 Uhr</option>
+                      <option value="10-12">10-12 Uhr</option>
+                      <option value="14-16">14-16 Uhr</option>
+                      <option value="16-18">16-18 Uhr</option>
                     </select>
                   </div>
                 </div>
@@ -314,11 +317,11 @@
                       name="kleiderArt"
                       class="form-select"
                     >
-                      <option value="1">Hose</option>
-                      <option value="2">T-Shirt</option>
-                      <option value="3">Pullover</option>
-                      <option value="4">Schuhe</option>
-                      <option value="5">Handschuhe</option>
+                      <option value="Hose">Hose</option>
+                      <option value="T-Shirt">T-Shirt</option>
+                      <option value="Pullover">Pullover</option>
+                      <option value="Schuhe">Schuhe</option>
+                      <option value="Handschuhe">Handschuhe</option>
                     </select>
                     <label for="kleiderArt" class="ps-4"
                       >Art der Kleidung</label
@@ -330,13 +333,13 @@
                     class="form-floating col-xl-3 col-lg-4 col-md-6"
                   >
                     <select id="normalegröße" name="größe" class="form-select">
-                      <option value="1">XXS</option>
-                      <option value="2">XS</option>
-                      <option value="3">S</option>
-                      <option value="4">M</option>
-                      <option value="5">L</option>
-                      <option value="6">XL</option>
-                      <option value="7">XXL</option>
+                      <option value="XXS">XXS</option>
+                      <option value="XS">XS</option>
+                      <option value="S">S</option>
+                      <option value="M">M</option>
+                      <option value="L">L</option>
+                      <option value="XL">XL</option>
+                      <option value="XXL">XXL</option>
                     </select>
                     <label for="normalegröße" class="ps-4"> Größe XXS - XXL</label>
                   </div>
@@ -349,20 +352,20 @@
                       name="schuhgröße"
                       class="form-select"
                     >
-                      <option value="1">35</option>
-                      <option value="2">36</option>
-                      <option value="3">37</option>
-                      <option value="4">38</option>
-                      <option value="5">39</option>
-                      <option value="6">40</option>
-                      <option value="7">41</option>
-                      <option value="8">42</option>
-                      <option value="9">43</option>
-                      <option value="10">44</option>
-                      <option value="11">45</option>
-                      <option value="12">46</option>
-                      <option value="13">47</option>
-                      <option value="14">48</option>
+                      <option value="35">35</option>
+                      <option value="36">36</option>
+                      <option value="37">37</option>
+                      <option value="38">38</option>
+                      <option value="39">39</option>
+                      <option value="40">40</option>
+                      <option value="41">41</option>
+                      <option value="42">42</option>
+                      <option value="43">43</option>
+                      <option value="44">44</option>
+                      <option value="45">45</option>
+                      <option value="46">46</option>
+                      <option value="47">47</option>
+                      <option value="48">48</option>
                     </select>
                     <label for="schuhgröße" class="ps-4">Schuhgröße</label>
                   </div>
@@ -375,19 +378,19 @@
                       name="handschuhgröße"
                       class="form-select"
                     >
-                      <option value="1">4,5</option>
-                      <option value="2">5</option>
-                      <option value="3">5,5</option>
-                      <option value="4">6</option>
-                      <option value="5">6,5</option>
-                      <option value="6">7</option>
-                      <option value="7">7,5</option>
+                      <option value="4,5">4,5</option>
+                      <option value="5">5</option>
+                      <option value="5,5">5,5</option>
+                      <option value="6">6</option>
+                      <option value="6,5">6,5</option>
+                      <option value="7">7</option>
+                      <option value="7,5">7,5</option>
                       <option value="8">8</option>
-                      <option value="9">8,5</option>
-                      <option value="10">9</option>
-                      <option value="11">9,5</option>
-                      <option value="12">10</option>
-                      <option value="13">11</option>
+                      <option value="8,5">8,5</option>
+                      <option value="9">9</option>
+                      <option value="9,5">9,5</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
                     </select>
                     <label for="handschuhgröße" class="ps-4">Handschuhgröße</label>
                   </div>
@@ -403,7 +406,7 @@
                     <label for="anzahl">Anzahl</label>
                   </div>
                   <div class="col-auto col-xl-3 col-md-4">
-                    <button class="btn btn-primary" type="submit" id="button1">
+                    <button class="btn btn-secondary" type="button" id="button1">
                       Kleidung hinzufügen
                     </button>
                   </div>
