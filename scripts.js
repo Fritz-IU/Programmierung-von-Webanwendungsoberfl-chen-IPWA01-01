@@ -1,12 +1,24 @@
 document.getElementById("ort2").addEventListener("change", function() {
     if(document.getElementById("ort2").checked) {
     document.getElementById("abholung").classList.remove("d-none");
+    document.getElementById("straße").required = true;
+    document.getElementById("hausNr").required = true;
+    document.getElementById("plz").required = true;
+    document.getElementById("stadt").required = true;
+    document.getElementById("datum").required = true;
+    document.getElementById("zeit").required = true;
 }
 });
 
 document.getElementById("ort1").addEventListener("change", function() {
     if(document.getElementById("ort1").checked) {
     document.getElementById("abholung").classList.add("d-none");
+    document.getElementById("straße").required = false;
+    document.getElementById("hausNr").required = false;
+    document.getElementById("plz").required = false;
+    document.getElementById("stadt").required = false;
+    document.getElementById("datum").required = false;
+    document.getElementById("zeit").required = false;
 }
 });
 
