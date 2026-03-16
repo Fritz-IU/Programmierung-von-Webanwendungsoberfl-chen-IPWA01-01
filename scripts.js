@@ -1,3 +1,14 @@
+document.getElementById("ort2").addEventListener("change", function() {
+    if(document.getElementById("ort2").checked) {
+    document.getElementById("abholung").classList.remove("d-none");
+}
+});
+
+document.getElementById("ort1").addEventListener("change", function() {
+    if(document.getElementById("ort1").checked) {
+    document.getElementById("abholung").classList.add("d-none");
+}
+});
 
 
 document.getElementById("kleiderArt").addEventListener("change", function () {
