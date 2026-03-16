@@ -1,3 +1,5 @@
+
+
 document.getElementById("kleiderArt").addEventListener("change", function () {
   if (
     this.value === "Hose" ||
@@ -42,5 +44,18 @@ document.getElementById("button1").addEventListener("click", function () {
     <td>${anzahl} <input type="hidden" name="anazhl[]" value="${anzahl}"</td>
     <td><button type="button" class="btn btn-sm btn-danger remove-btn">Löschen</button></td>`;
     tableBody.appendChild(newRow);
+    document.getElementById("kleiderArt").value = "";
+    document.getElementById("anazhl").value = "";
+    document.getElementById("normalegröße").value = "";
+    document.getElementById("schuhgröße").value = "";
+    document.getElementById("handschuhgröße").value = "";
+  } else {
+    alert("Bitte alle Angaben zu den Kleidern ausfüllen!")
   }
 });
+
+document.querySelector("#kleiderTabelle").addEventListener("click", function(e) {
+    if(e.target.classList.contains("remove-btn")) {
+        e.target.closest("tr").remove();
+    }
+})
