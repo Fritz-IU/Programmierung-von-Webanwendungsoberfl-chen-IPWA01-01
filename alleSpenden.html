@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="images/favicon.ico" />
@@ -12,8 +12,8 @@
     />
     <link href="style.css" rel="stylesheet" />
     <title>KleiSper</title>
-</head>
-<body class="d-flex flex-column min-vh-100">
+  </head>
+  <body class="d-flex flex-column min-vh-100">
     <header>
       <nav class="navbar navbar-expand-md bg-dark-subtle shadow fixed-top">
         <div class="container-md d-flex align-items-center">
@@ -51,22 +51,36 @@
                     >News</a
                   >
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Krisengebiete</a></li>
                     <li>
-                      <a class="dropdown-item" href="#">Sammelfahrzeuge</a>
+                      <a class="dropdown-item" href="news.html"
+                        >Krisengebiete</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">News zu KleiSper</a>
+                      <a class="dropdown-item" href="news.html"
+                        >Sammelfahrzeuge</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="news.html"
+                        >News zu KleiSper</a
+                      >
                     </li>
                     <li><hr class="dropdown-divider" /></li>
-                    <li><a class="dropdown-item" href="#">Alle News</a></li>
+                    <li>
+                      <a class="dropdown-item" href="news.html">Alle News</a>
+                    </li>
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">Meine Spenden</a>
+                  <a class="nav-link active" href="nutzerSpenden.html"
+                    >Meine Spenden</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">Alle Spenden</a>
+                  <a class="nav-link active" href="alleSpenden.html"
+                    >Alle Spenden</a
+                  >
                 </li>
               </ul>
             </div>
@@ -118,9 +132,7 @@
         </div>
       </div>
     </header>
-    <main class="flex-grow-1">
-
-    </main>
+    <main class="flex-grow-1"></main>
 
     <footer class="bg-dark text-white py-5">
       <div class="container">
@@ -135,18 +147,38 @@
           </div>
           <div class="col-md-4">
             <h5>Navigation</h5>
-            <ul class="list-unstyled">
-              <li>Home</li>
-              <li>News</li>
-              <li>Meine Spenden</li>
-              <li>Alle Spenden</li>
+            <ul class="list-unstyled lh-lg">
+              <li>
+                <a class="nav-link d-inline-block" href="index.html">Home</a>
+              </li>
+              <li>
+                <a class="nav-link d-inline-block" href="news.html">News</a>
+              </li>
+              <li>
+                <a class="nav-link d-inline-block" href="nutzerSpenden.html"
+                  >Meine Spenden</a
+                >
+              </li>
+              <li>
+                <a class="nav-link d-inline-block" href="alleSpenden.html"
+                  >Alle Spenden</a
+                >
+              </li>
             </ul>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 lh-lg">
             <h5>Rechtliches</h5>
             <ul class="list-unstyled">
-              <li>Impressum</li>
-              <li>Datenschutz</li>
+              <li>
+                <a class="nav-link d-inline-block" href="impressum.html"
+                  >Impressum</a
+                >
+              </li>
+              <li>
+                <a class="nav-link d-inline-block" href="datenschutz.html"
+                  >Datenschutz</a
+                >
+              </li>
             </ul>
           </div>
           <hr class="mt-4 border-secondary" />
@@ -164,5 +196,5 @@
       crossorigin="anonymous"
     ></script>
     <script src="scripts.js"></script>
-</body>
+  </body>
 </html>

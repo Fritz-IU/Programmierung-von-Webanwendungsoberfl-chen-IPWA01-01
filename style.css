@@ -1,3 +1,10 @@
+html {
+  overflow-y: scroll;
+  /*Reserviert imme einen Bereich für eine Scrollbar, 
+  um einen Verrutschen des Layouts zu verhindern,
+  beim Wechsel von Seiten mit Scrollbar zu einer ohne. */
+}
+
 /* https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
 /* Chrome, Safari, Edge, Opera */
 .my-no-spin::-webkit-outer-spin-button,
