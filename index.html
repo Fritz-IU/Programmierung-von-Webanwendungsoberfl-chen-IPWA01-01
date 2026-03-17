@@ -74,6 +74,7 @@
           <div class="d-flex ms-auto">
             <form class="d-flex" role="search">
               <input
+                id="suche"
                 class="form-control me-2"
                 type="search"
                 placeholder="Suche"
@@ -155,6 +156,7 @@
                   <li><strong>Schuhe:</strong></li>
                   <li><strong>Handschuhe:</strong></li>
                 </ul>
+                <p>Die zusammenfassung der Gesamten spenden ist noch nicht implementiert.</p>
               </div>
             </div>
           </div>
@@ -241,6 +243,7 @@
                   name="email"
                   class="form-control"
                   placeholder="name@beispiel.de"
+                  autocomplete="email"
                   required
                 />
               </div>
@@ -427,7 +430,7 @@
                   <div class="form-floating col-xl-3 col-lg-4 col-md-6">
                     <input
                       type="number"
-                      id="anazhl"
+                      id="anzahl"
                       name="anzahl"
                       class="form-control"
                       min="1"

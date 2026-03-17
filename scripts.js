@@ -44,7 +44,7 @@ document.getElementById("kleiderArt").addEventListener("change", function () {
 
 document.getElementById("button1").addEventListener("click", function () {
   const kleiderArt = document.getElementById("kleiderArt").value;
-  const anzahl = document.getElementById("anazhl").value;
+  const anzahl = document.getElementById("anzahl").value;
   let größe = "M";
   if (
     kleiderArt === "Hose" ||
@@ -67,7 +67,7 @@ document.getElementById("button1").addEventListener("click", function () {
     <td><button type="button" class="btn btn-sm btn-danger remove-btn">Löschen</button></td>`;
     tableBody.appendChild(newRow);
     document.getElementById("kleiderArt").value = "";
-    document.getElementById("anazhl").value = "";
+    document.getElementById("anzahl").value = "";
     document.getElementById("normalegröße").value = "";
     document.getElementById("schuhgröße").value = "";
     document.getElementById("handschuhgröße").value = "";
@@ -84,18 +84,18 @@ document
     }
   });
 
-document.getElementById("button2").addEventListener("click", function (e) {
+document.getElementById("formular").addEventListener("submit", function (e) {
   e.preventDefault();
-    const alleAngaben = {
-      Abgabe: document.getElementById("ort1").value,
-      Krisengebiet: document.getElementById("krisengebiet").value,
-      Vorname: document.getElementById("vorN").value,
-      Nachname: document.getElementById("nachN").value,
-      "E-Mail Adresse": document.getElementById("email").value,
-      Adresse: [],
-      Spende: [],
-    };
-  if(document.getElementById("ort2").checked) {
+  const alleAngaben = {
+    Abgabe: document.getElementById("ort1").value,
+    Krisengebiet: document.getElementById("krisengebiet").value,
+    Vorname: document.getElementById("vorN").value,
+    Nachname: document.getElementById("nachN").value,
+    "E-Mail Adresse": document.getElementById("email").value,
+    Adresse: [],
+    Spende: [],
+  };
+  if (document.getElementById("ort2").checked) {
     alleAngaben.Abgabe = document.getElementById("ort2").value;
     const abholungStraße = document.getElementById("straße").value;
     const abholungHausNr = document.getElementById("hausNr").value;
@@ -110,7 +110,7 @@ document.getElementById("button2").addEventListener("click", function (e) {
       Stadt: abholungStadt,
       Datum: abholungDatum,
       Zeit: abholungZeit,
-    })
+    });
   }
 
   const zeilen = document.querySelectorAll("#kleiderTabelle tbody tr");
@@ -126,4 +126,6 @@ document.getElementById("button2").addEventListener("click", function (e) {
   });
   const spendeFertig = JSON.stringify(alleAngaben);
   console.log(spendeFertig);
+  alert("Stop");
+  window.location.href = "zusammenfassung.html";
 });
