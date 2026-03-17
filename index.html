@@ -166,7 +166,7 @@
         >
           <div class="row">
             <div class="col-md-2"></div>
-            <form class="col-md-8">
+            <form id="formular" class="col-md-8">
               <h3>Kleiderspende registrieren:</h3>
               <p>Sollen die Kleider abgeholt oder vor Ort abgegeben werden?</p>
               <div class="form-check">
@@ -175,6 +175,7 @@
                   type="radio"
                   name="ort"
                   id="ort1"
+                  value="Vor Ort"
                 />
                 <label class="form-check-label" for="ort1"
                   >Übergabe an der Geschäftsstelle</label
@@ -186,6 +187,7 @@
                   type="radio"
                   name="ort"
                   id="ort2"
+                  value="Abholung"
                 />
                 <label class="form-check-label" for="ort2"
                   >Abholung durch ein Sammelfahrzeug</label
@@ -202,11 +204,11 @@
                   required
                 >
                   <option value="" selected disabled>Bitte auswählen</option>
-                  <option value="1">Mandalore</option>
-                  <option value="2">Alderaan</option>
-                  <option value="1">Tatooine</option>
-                  <option value="1">Naboo</option>
-                  <option value="1">Endor</option>
+                  <option value="Mandalore">Mandalore</option>
+                  <option value="Alderaan">Alderaan</option>
+                  <option value="Tatooine">Tatooine</option>
+                  <option value="Naboo">Naboo</option>
+                  <option value="Endor">Endor</option>
                 </select>
               </div>
               <div class="row">
@@ -445,7 +447,7 @@
                 </div>
               </div>
               <div class="col-auto mt-4">
-                <table class="table table-striped" id="kleiderTabelle">
+                <table id="kleiderTabelle" class="table table-striped" >
                   <thead>
                     <tr>
                       <th scope="col">Art der Kleidung</th>
