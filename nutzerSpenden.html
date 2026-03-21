@@ -132,7 +132,53 @@
         </div>
       </div>
     </header>
-    <main class="flex-grow-1"></main>
+    <main class="flex-grow-1">
+      <div class="container-md">
+        <div
+          class="mt-3"
+          style="background-color: beige; border-radius: 5px; padding: 10px"
+        >
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <h3>Übersicht deiner Spenden:</h3>
+              <p>
+                Hier kannst du alle deine bisherigen Spenden anzeigen lassen.
+                <br />
+                Dafür musst du nur die E-Mail-Adresse eingeben, die du für die
+                Spenden benutzt hast.
+              </p>
+              <div class="d-flex ms-auto">
+                <form class="d-flex" role="search">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="name@beispiel.de"
+                    aria-label="Search"
+                    style="width: 250px"
+                  />
+                  <button
+                    class="btn btn-link btn-outline-secondary"
+                    type="submit"
+                  >
+                    <img src="images/search.svg" alt="Suchen" width="20px" />
+                  </button>
+                </form>
+              </div>
+              <ul class="list-unstyled p-2">
+                  <li><strong>Hosen:</strong></li>
+                  <li><strong>T-Shirts:</strong></li>
+                  <li><strong>Pullover:</strong></li>
+                  <li><strong>Schuhe:</strong></li>
+                  <li><strong>Handschuhe:</strong></li>
+                </ul>
+                <p>Die zusammenfassung deiner Spenden ist noch nicht
+                  implementiert.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <footer class="bg-dark text-white py-5">
       <div class="container">
