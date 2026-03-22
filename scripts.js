@@ -91,10 +91,11 @@ document.getElementById("formular").addEventListener("submit", function (e) {
     Krisengebiet: document.getElementById("krisengebiet").value,
     Vorname: document.getElementById("vorN").value,
     Nachname: document.getElementById("nachN").value,
-    "E-Mail Adresse": document.getElementById("email").value,
+    EMailAdresse: document.getElementById("email").value,
     Adresse: [],
-    Spende: [],
+    Kleider: [],
   };
+  //Auch die Adresse speichern bei Abholung
   if (document.getElementById("ort2").checked) {
     alleAngaben.Abgabe = document.getElementById("ort2").value;
     const abholungStraße = document.getElementById("straße").value;
@@ -112,19 +113,20 @@ document.getElementById("formular").addEventListener("submit", function (e) {
       Zeit: abholungZeit,
     });
   }
-
+  //Einträge aus der Tabelle speichern
   const zeilen = document.querySelectorAll("#kleiderTabelle tbody tr");
   zeilen.forEach(function (zeile) {
     const artKleider = zeile.querySelector("#kleiderArt").value;
     const größeKleider = zeile.querySelector("#größe").value;
     const anzahlKleider = zeile.querySelector("#anzahl").value;
-    alleAngaben.Spende.push({
+    alleAngaben.Kleider.push({
       Kleidung: artKleider,
       Größe: größeKleider,
       Anzahl: anzahlKleider,
     });
   });
   const spendeFertig = JSON.stringify(alleAngaben);
+  sessionStorage.setItem("spendenDaten", spendeFertig);
   console.log(spendeFertig);
   alert("Stop");
   window.location.href = "zusammenfassung.html";
