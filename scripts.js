@@ -127,7 +127,7 @@ document.getElementById("formular").addEventListener("submit", function (e) {
   });
   const spendeFertig = JSON.stringify(alleAngaben);
   sessionStorage.setItem("spendenDaten", spendeFertig);
-  console.log(spendeFertig);
-  alert("Stop");
+  //console.log(spendeFertig);
+  //alert("Stop");
   window.location.href = "zusammenfassung.html";
 });
