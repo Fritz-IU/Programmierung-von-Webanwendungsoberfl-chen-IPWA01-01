@@ -1,3 +1,4 @@
+//Adressangaben verpflichtend machen, bei Abholung
 document.getElementById("ort2").addEventListener("change", function () {
   if (document.getElementById("ort2").checked) {
     document.getElementById("abholung").classList.remove("d-none");
@@ -10,6 +11,7 @@ document.getElementById("ort2").addEventListener("change", function () {
   }
 });
 
+//Adressangaben nciht verpflichtend bei Abgabe vor Ort
 document.getElementById("ort1").addEventListener("change", function () {
   if (document.getElementById("ort1").checked) {
     document.getElementById("abholung").classList.add("d-none");
@@ -22,6 +24,7 @@ document.getElementById("ort1").addEventListener("change", function () {
   }
 });
 
+//Anpassen der vorgegebenen Größen je nach ausgewählter Kleiderart
 document.getElementById("kleiderArt").addEventListener("change", function () {
   if (
     this.value === "Hose" ||
@@ -42,6 +45,7 @@ document.getElementById("kleiderArt").addEventListener("change", function () {
   }
 });
 
+//Funktion des "Kleidungs Hinzufügen" Buttons
 document.getElementById("button1").addEventListener("click", function () {
   const kleiderArt = document.getElementById("kleiderArt").value;
   const anzahl = document.getElementById("anzahl").value;
@@ -76,6 +80,7 @@ document.getElementById("button1").addEventListener("click", function () {
   }
 });
 
+//Funktion des entfernen Buttons in des Kleidertabelle
 document
   .querySelector("#kleiderTabelle")
   .addEventListener("click", function (e) {
@@ -84,8 +89,15 @@ document
     }
   });
 
+ //Funktion das "Spenden registrieren!" Buttons 
 document.getElementById("formular").addEventListener("submit", function (e) {
   e.preventDefault();
+  if (document.querySelectorAll("#kleiderTabelle tbody tr").length === 0) {
+    alert("Bitte gib mindestens ein Kleidungsstück zur Spende an!");
+    return;
+  }
+  
+  //Grundangaben speichern
   const alleAngaben = {
     Abgabe: document.getElementById("ort1").value,
     Krisengebiet: document.getElementById("krisengebiet").value,
@@ -95,7 +107,7 @@ document.getElementById("formular").addEventListener("submit", function (e) {
     Adresse: [],
     Kleider: [],
   };
-  //Auch die Adresse speichern bei Abholung
+  //Bei Abholung die Adresse speichern
   if (document.getElementById("ort2").checked) {
     alleAngaben.Abgabe = document.getElementById("ort2").value;
     const abholungStraße = document.getElementById("straße").value;
@@ -113,7 +125,7 @@ document.getElementById("formular").addEventListener("submit", function (e) {
       Zeit: abholungZeit,
     });
   }
-  //Einträge aus der Tabelle speichern
+  //Einträge aus der Kleidertabelle speichern
   const zeilen = document.querySelectorAll("#kleiderTabelle tbody tr");
   zeilen.forEach(function (zeile) {
     const artKleider = zeile.querySelector("#kleiderArt").value;
