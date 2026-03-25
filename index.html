@@ -263,6 +263,7 @@
                   class="form-control"
                   placeholder="name@beispiel.de"
                   autocomplete="email"
+                  inputmode="email"
                   required
                 />
               </div>
@@ -280,10 +281,13 @@
                 <div class="col-sm-4 col-12">
                   <label for="hausNr" class="form-label">Hausnummer:</label>
                   <input
-                    type="text"
+                    type="number"
                     id="hausNr"
                     name="hausNr"
-                    class="form-control"
+                    class="form-control my-no-spin"
+                    inputmode="numeric"
+                    step="1"
+                    oninput="if (this.value < 0) this.value = 0;"
                   />
                 </div>
                 <div class="col-sm-3 col-12">
@@ -294,6 +298,8 @@
                     name="plz"
                     min="38000"
                     max="38999"
+                    inputmode="numeric"
+                    step="1"
                     class="form-control my-no-spin"
                   />
                 </div>
@@ -453,7 +459,9 @@
                       name="anzahl"
                       class="form-control"
                       min="1"
-                      oninput="if (this.value < 0) this.value = 0;"
+                      inputmode="numeric"
+                      step="1"
+                      oninput="if (this.value < 1) this.value = 1;"
                     />
                     <label for="anzahl">Anzahl</label>
                   </div>
