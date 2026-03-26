@@ -62,6 +62,7 @@ document.getElementById("button1").addEventListener("click", function () {
     größe = document.getElementById("handschuhgröße").value;
   }
   if (kleiderArt && anzahl && größe) {
+    document.getElementById("checkKleider").classList.add("d-none");
     const tableBody = document.querySelector("#kleiderTabelle tbody");
     const newRow = document.createElement("tr");
     newRow.innerHTML = `
@@ -89,11 +90,18 @@ document
     }
   });
 
- //Funktion das "Spenden registrieren!" Buttons 
+ //Funktion das "Spenden registrieren!" Buttons
 document.getElementById("formular").addEventListener("submit", function (e) {
   e.preventDefault();
+  const formular = e.currentTarget;
+  if (!formular.checkValidity()) {
+        e.stopPropagation();
+        formular.classList.add("was-validated");
+        return;
+      }
   if (document.querySelectorAll("#kleiderTabelle tbody tr").length === 0) {
-    alert("Bitte gib mindestens ein Kleidungsstück zur Spende an!");
+    //alert("Bitte gib mindestens ein Kleidungsstück zur Spende an!");
+    document.getElementById("checkKleider").classList.remove("d-none");
     return;
   }
   

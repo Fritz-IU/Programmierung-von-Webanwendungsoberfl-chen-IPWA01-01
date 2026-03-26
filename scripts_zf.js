@@ -6,10 +6,10 @@ if (spendeJSON) {
   let person =
     "<strong>Persönliche Angaben:</strong><ul class='list-unstyled'><li id='ort'></li><li id='krisengebiet'></li><li id='vorname'></li><li id='nachname'></li><li id='email'></li></ul>";
   //Bei Abholung Adresse hinzufügen
-  if (spende.Abgabe === "Abholung") {
+  
     let adresse =
       "<strong>Abholadresse:</strong><ul class='list-unstyled'><li id='straße'></li><li id='hausnr'></li><li id='plz'></li><li id='stadt'></li><li id='datum'></li><li id='zeit'></li></ul>";
-  }
+  
   let kleiderTabelle =
     "<table class='table table-striped'><thead><tr><th>Art der Kleidung</th><th>Größe</th><th>Menge</th></tr></thead></table>";
 

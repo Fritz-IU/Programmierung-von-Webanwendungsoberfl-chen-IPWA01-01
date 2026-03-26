@@ -185,7 +185,7 @@
         >
           <div class="row">
             <div class="col-md-2"></div>
-            <form id="formular" class="col-md-8">
+            <form id="formular" class="col-md-8 needs-validation" novalidate>
               <h3>Kleiderspende registrieren:</h3>
               <p>Sollen die Kleider abgeholt oder vor Ort abgegeben werden?</p>
               <div class="form-check">
@@ -213,24 +213,30 @@
                 <label class="form-check-label" for="ort2"
                   >Abholung durch ein Sammelfahrzeug</label
                 >
+                <div class="invalid-feedback">Bitte wähle ein Option aus.</div>
               </div>
-              <div class="d-flex align-items-center">
-                <label for="krisengebiet" class="form-label me-2"
-                  >Krisengebiet:</label
-                >
-                <select
-                  id="krisengebiet"
-                  name="krisengebiet"
-                  class="form-select w-auto"
-                  required
-                >
-                  <option value="" selected disabled>Bitte auswählen</option>
-                  <option value="Mandalore">Mandalore</option>
-                  <option value="Alderaan">Alderaan</option>
-                  <option value="Tatooine">Tatooine</option>
-                  <option value="Naboo">Naboo</option>
-                  <option value="Endor">Endor</option>
-                </select>
+              <div class="row">
+                <div class="col-sm-6 col-12">
+                  <label for="krisengebiet" class="form-label"
+                    >Krisengebiet:</label
+                  >
+                  <select
+                    id="krisengebiet"
+                    name="krisengebiet"
+                    class="form-select"
+                    required
+                  >
+                    <option value="" selected disabled>Bitte auswählen</option>
+                    <option value="Mandalore">Mandalore</option>
+                    <option value="Alderaan">Alderaan</option>
+                    <option value="Tatooine">Tatooine</option>
+                    <option value="Naboo">Naboo</option>
+                    <option value="Endor">Endor</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Bitte wähle ein Krisengebiet aus.
+                  </div>
+                </div>
               </div>
               <div class="row">
                 <div class="col-sm-6 col-12">
@@ -242,6 +248,9 @@
                     class="form-control"
                     required
                   />
+                  <div class="invalid-feedback">
+                    Bitte gib deinen Vornamen an.
+                  </div>
                 </div>
                 <div class="col-sm-6 col-12">
                   <label for="nachN" class="form-label">Nachname:</label>
@@ -252,6 +261,9 @@
                     class="form-control"
                     required
                   />
+                  <div class="invalid-feedback">
+                    Bitte gib deinen Nachnamen an.
+                  </div>
                 </div>
               </div>
               <div class="col-12">
@@ -266,6 +278,9 @@
                   inputmode="email"
                   required
                 />
+                <div class="invalid-feedback">
+                  Bitte gib eine E-Mail-Adresse an.
+                </div>
               </div>
               <div id="abholung" class="row mt-2 d-none">
                 <p class="col-12"><strong>Angaben für die Abholung:</strong></p>
@@ -277,6 +292,7 @@
                     name="straße"
                     class="form-control"
                   />
+                  <div class="invalid-feedback">Bitte gib eine Straße an.</div>
                 </div>
                 <div class="col-sm-4 col-12">
                   <label for="hausNr" class="form-label">Hausnummer:</label>
@@ -289,6 +305,9 @@
                     step="1"
                     oninput="if (this.value < 0) this.value = 0;"
                   />
+                  <div class="invalid-feedback">
+                    Bitte gib eine Hausnummer an.
+                  </div>
                 </div>
                 <div class="col-sm-3 col-12">
                   <label for="plz" class="form-label">Postleitzahl:</label>
@@ -302,6 +321,9 @@
                     step="1"
                     class="form-control my-no-spin"
                   />
+                  <div class="invalid-feedback">
+                    Bitte gib eine Postleitzahl von 38000 bis 38999 an.
+                  </div>
                 </div>
                 <div class="col-sm-9 col-12">
                   <label for="stadt" class="form-label">Stadt:</label>
@@ -311,6 +333,7 @@
                     name="stadt"
                     class="form-control"
                   />
+                  <div class="invalid-feedback">Bitte gib eine Stadt an.</div>
                 </div>
                 <div class="row align-items-center mt-2">
                   <div class="col-12">
@@ -324,8 +347,10 @@
                       name="datum"
                       class="form-control"
                     />
+                    <div class="invalid-feedback">
+                      Bitte wähle ein Datum aus.
+                    </div>
                   </div>
-                  <div class="col-auto"></div>
                   <div class="col-auto">
                     <label for="zeit" class="col-form-label">Zeit:</label>
                     <select id="zeit" name="zeit" class="form-select">
@@ -337,6 +362,9 @@
                       <option value="14-16">14-16 Uhr</option>
                       <option value="16-18">16-18 Uhr</option>
                     </select>
+                    <div class="invalid-feedback">
+                      Bitte wähle einen Zeitslot aus.
+                    </div>
                   </div>
                 </div>
               </div>
@@ -345,7 +373,7 @@
                 <p class="col-12 mt-2 mb-0">
                   <strong>Angaben zu den Kleidern:</strong>
                 </p>
-                <div class="row g-3 mt-0">
+                <div id="kleiderAuswahl" class="row g-3 mt-0">
                   <div
                     id="kleiderArten"
                     class="form-floating col-xl-3 col-lg-4 col-md-6"
@@ -476,8 +504,8 @@
                   </div>
                 </div>
               </div>
-              <div class="col-auto mt-4">
-                <table id="kleiderTabelle" class="table table-striped">
+              <div class="col-auto mt-4 mb-1">
+                <table id="kleiderTabelle" class="table table-striped mb-0">
                   <thead>
                     <tr>
                       <th scope="col">Art der Kleidung</th>
@@ -488,9 +516,12 @@
                   </thead>
                   <tbody></tbody>
                 </table>
+                <div id="checkKleider" class="d-none" style="color: #DC3545;">
+                  <small>Bitte gebe mindestens ein Kleidungsstück zur Spende an.</small>
+                </div>
               </div>
               <div class="col-auto">
-                <button class="btn btn-primary" type="submit" id="button2">
+                <button class="btn btn-primary mt-2" type="submit" id="button2">
                   Spende registrieren!
                 </button>
               </div>
