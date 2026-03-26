@@ -104,6 +104,10 @@ document.getElementById("formular").addEventListener("submit", function (e) {
     document.getElementById("checkKleider").classList.remove("d-none");
     return;
   }
+  if (document.getElementById("ort2").checked && (document.getElementById("plz").value < 38000 || document.getElementById("plz").value > 38999)) {
+    alert("Abholung nur im Postleizahlbereich beginnend mit 38 möglich!");
+    return;
+  }
   
   //Grundangaben speichern
   const alleAngaben = {
