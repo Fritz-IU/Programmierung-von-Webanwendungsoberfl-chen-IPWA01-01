@@ -93,6 +93,7 @@ document
  //Funktion das "Spenden registrieren!" Buttons
 document.getElementById("formular").addEventListener("submit", function (e) {
   e.preventDefault();
+  //Validierung der Pflichtfelder durchführen
   const formular = e.currentTarget;
   if (!formular.checkValidity()) {
         e.stopPropagation();
