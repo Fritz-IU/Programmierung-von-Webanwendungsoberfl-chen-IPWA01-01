@@ -16,4 +16,5 @@ html {
 /* Firefox */
 .my-no-spin[type="number"] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
