@@ -90,26 +90,30 @@ document
     }
   });
 
- //Funktion das "Spenden registrieren!" Buttons
+//Funktion das "Spenden registrieren!" Buttons
 document.getElementById("formular").addEventListener("submit", function (e) {
   e.preventDefault();
   //Validierung der Pflichtfelder durchführen
   const formular = e.currentTarget;
   if (!formular.checkValidity()) {
-        e.stopPropagation();
-        formular.classList.add("was-validated");
-        return;
-      }
+    e.stopPropagation();
+    formular.classList.add("was-validated");
+    return;
+  }
   if (document.querySelectorAll("#kleiderTabelle tbody tr").length === 0) {
     //alert("Bitte gib mindestens ein Kleidungsstück zur Spende an!");
     document.getElementById("checkKleider").classList.remove("d-none");
     return;
   }
-  if (document.getElementById("ort2").checked && (document.getElementById("plz").value < 38000 || document.getElementById("plz").value > 38999)) {
+  if (
+    document.getElementById("ort2").checked &&
+    (document.getElementById("plz").value < 38000 ||
+      document.getElementById("plz").value > 38999)
+  ) {
     alert("Abholung nur im Postleizahlbereich beginnend mit 38 möglich!");
     return;
   }
-  
+
   //Grundangaben speichern
   const alleAngaben = {
     Abgabe: document.getElementById("ort1").value,
