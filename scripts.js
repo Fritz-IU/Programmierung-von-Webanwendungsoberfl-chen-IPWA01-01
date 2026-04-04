@@ -1,4 +1,4 @@
-//Adressangaben verpflichtend machen, bei Abholung
+//Adressangaben verpflichtend bei Abholung
 document.getElementById("ort2").addEventListener("change", function () {
   if (document.getElementById("ort2").checked) {
     document.getElementById("abholung").classList.remove("d-none");
@@ -11,7 +11,7 @@ document.getElementById("ort2").addEventListener("change", function () {
   }
 });
 
-//Adressangaben nciht verpflichtend bei Abgabe vor Ort
+//Adressangaben nicht verpflichtend bei Abgabe vor Ort
 document.getElementById("ort1").addEventListener("change", function () {
   if (document.getElementById("ort1").checked) {
     document.getElementById("abholung").classList.add("d-none");
@@ -50,6 +50,7 @@ document.getElementById("button1").addEventListener("click", function () {
   const kleiderArt = document.getElementById("kleiderArt").value;
   const anzahl = document.getElementById("anzahl").value;
   let größe = "M";
+  //Abfragen welche Größe(Dropdown) ausgelesen werden muss
   if (
     kleiderArt === "Hose" ||
     kleiderArt === "T-Shirt" ||
@@ -61,6 +62,7 @@ document.getElementById("button1").addEventListener("click", function () {
   } else if (kleiderArt === "Handschuhe") {
     größe = document.getElementById("handschuhgröße").value;
   }
+  //bei vollständiger Angabe, einfügen mit neuer Zeile in die Tabelle
   if (kleiderArt && anzahl && größe) {
     document.getElementById("checkKleider").classList.add("d-none");
     const tableBody = document.querySelector("#kleiderTabelle tbody");
@@ -100,11 +102,12 @@ document.getElementById("formular").addEventListener("submit", function (e) {
     formular.classList.add("was-validated");
     return;
   }
+  //Überprüfen, ob Kleidung angegeben ist
   if (document.querySelectorAll("#kleiderTabelle tbody tr").length === 0) {
-    //alert("Bitte gib mindestens ein Kleidungsstück zur Spende an!");
     document.getElementById("checkKleider").classList.remove("d-none");
     return;
   }
+  //Prüfung der PLZ auf den Bereich 38xxx
   if (
     document.getElementById("ort2").checked &&
     (document.getElementById("plz").value < 38000 ||
@@ -113,7 +116,6 @@ document.getElementById("formular").addEventListener("submit", function (e) {
     alert("Abholung nur im Postleizahlbereich beginnend mit 38 möglich!");
     return;
   }
-
   //Grundangaben speichern
   const alleAngaben = {
     Abgabe: document.getElementById("ort1").value,
@@ -154,9 +156,9 @@ document.getElementById("formular").addEventListener("submit", function (e) {
       Anzahl: anzahlKleider,
     });
   });
+  //Alle angaben in ein JSON Format speichern
   const spendeFertig = JSON.stringify(alleAngaben);
+  //Daten in der Sitzung speichern, damit anderen Unterseiten auch damit arbeiten können
   sessionStorage.setItem("spendenDaten", spendeFertig);
-  //console.log(spendeFertig);
-  //alert("Stop");
   window.location.href = "zusammenfassung.html";
 });
